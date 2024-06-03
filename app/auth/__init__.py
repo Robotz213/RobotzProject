@@ -1,15 +1,17 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, redirect, url_for
 import pathlib
-
-from clear import clear
 
 this_path = pathlib.Path(__file__).parent.resolve().__str__()
 
-dashboard_blueprint = Blueprint('dashboard', __name__, template_folder = 'templates_dashboard', static_folder = this_path)
+auth_blueprint = Blueprint('auth', __name__, template_folder = 'templates_auth', static_folder = this_path)
 
-@dashboard_blueprint.route("/")
-def dashboard():
+@auth_blueprint.route("/login")
+def login():
     
-    pagina = "includes/dashboard.html"
-    return render_template("index.html", pagina = pagina)
+    return render_template("login.html")
 
+@auth_blueprint.route("/logout")
+def logout():
+    
+    # flash("Sessão encerrada!", "success")
+    return redirect( url_for("auth.login") )

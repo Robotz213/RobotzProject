@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, redirect, flash, url_for
 import pathlib
 
 from clear import clear
@@ -12,4 +12,5 @@ def dashboard():
     
     pagina = "includes/dashboard.html"
     return render_template("index.html", pagina = pagina)
+
 
