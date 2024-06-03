@@ -1,2 +1,10 @@
 flask
 clear
+psutil
+flask-wtf
+flask-form
+flask_mail
+apscheduler
+flask-bcrypt
+flask-Login
+flask-sqlalchemy
