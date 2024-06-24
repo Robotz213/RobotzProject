@@ -4,8 +4,6 @@ from flask_wtf import CSRFProtect
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail
 
-
-
 app = Flask(__name__)
 sqlite = "sqlite:///dev.db"
 
