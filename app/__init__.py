@@ -5,6 +5,7 @@ from app.home import home_blueprint
 from app.auth import auth_blueprint
 
 app = Flask(__name__)
+app.secret_key = "5141951"
 
 app.register_blueprint(home_blueprint)
 app.register_blueprint(dashboard_blueprint, url_prefix = "/dashboard")
