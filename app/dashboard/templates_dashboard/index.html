@@ -14,6 +14,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
         integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ url_for('static', filename = 'vendor/bootstrap/js/bootstrap.bundle.min.js' ) }}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{ url_for('static', filename = 'js/sb-admin-2.min.js') }}"></script>
+        
     <script src="https://cdn.jsdelivr.net/npm/jquery.easing/jquery.easing.min.js"
         integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
 
@@ -212,12 +219,15 @@
             </div>
         </div>
     </div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="{{ url_for('static', filename = 'vendor/bootstrap/js/bootstrap.bundle.min.js' ) }}"></script>
+    {% include 'partials/message.html' %}
 
-    <!-- Custom scripts for all pages-->
-    <script src="{{ url_for('static', filename = 'js/sb-admin-2.min.js') }}"></script>
+    {% endif %}
+    {% endwith %}
+
+    
 
 
 </body>
