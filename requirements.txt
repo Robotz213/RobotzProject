@@ -8,3 +8,6 @@ apscheduler
 flask-bcrypt
 flask-Login
 flask-sqlalchemy
+flask-talisman
+mysql-connector-python
+babel
