@@ -30,6 +30,7 @@ csp = {
         'https://cdn.jsdelivr.net',
         'https://use.fontawesome.com',
         'https://cdnjs.cloudflare.com',
+        "https://code.jquery.com",
         "'unsafe-inline'"
     ],
     'script-src': [
@@ -37,6 +38,7 @@ csp = {
         'https://cdn.jsdelivr.net',
         'https://use.fontawesome.com',
         'https://cdnjs.cloudflare.com',
+        "https://code.jquery.com",
         "'unsafe-inline'"
     ]
 }
