@@ -11,3 +11,4 @@ flask-sqlalchemy
 flask-talisman
 mysql-connector-python
 babel
+openpyxl
