@@ -5,7 +5,7 @@ Chart.defaults.global.defaultFontColor = '#292b2c';
 // Area Chart Example
 $(document).ready(function () {
   $.ajax({
-    url: "/dados-do-grafico",
+    url: "/dashboard/grafico_processos",
     type: "GET",
     success: function (data) {
       var ctx = document.getElementById("myAreaChart").getContext('2d');

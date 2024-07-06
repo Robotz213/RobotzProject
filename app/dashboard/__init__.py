@@ -1,5 +1,5 @@
 # Seu módulo principal onde o Blueprint é registrado
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, jsonify
 from app.models.sql.mysql.law.processos import Processos
 from app.utils import format_currency_brl
 import pathlib
@@ -31,3 +31,13 @@ def dashboard():
     return render_template("index.html", pagina=pagina,
                            database=database, format_currency_brl=format_currency_brl,
                            total_proc = total_proc, condenado = condenado)
+    
+@dashboard_blueprint.route("/grafico_processos")
+def graficoproc():
+    
+    data = []
+    labels = []
+    
+    json_data = {'data': data, 'labels': labels}
+    
+    return jsonify(json_data)
