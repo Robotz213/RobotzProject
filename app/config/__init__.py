@@ -1,3 +1,9 @@
+from dotenv import load_dotenv
+import os
+
+# Carregar variáveis de ambiente do .env
+load_dotenv()
+
 def debug() -> bool:
     
     return True
@@ -7,15 +13,12 @@ def beta_test() -> bool:
     return False
 
 def MySQL() -> dict:
-    
     return {
-        "DBLogin": "robotz",
-        "DBPassword": "52CLMze4NfxeXrr5",
-        "DBHost": "195.200.1.226",
-        "Database": "robotz"
-        
+        "DBLogin": os.getenv("DB_LOGIN"),
+        "DBPassword": os.getenv("DB_PASSWORD"),
+        "DBHost": os.getenv("DB_HOST"),
+        "Database": os.getenv("DATABASE")
     }
-
 def permissions_policy() -> dict:
     
     # Configurando Permissions-Policy sem 'browsing-topics'

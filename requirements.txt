@@ -12,3 +12,4 @@ flask-talisman
 mysql-connector-python
 babel
 openpyxl
+python-dotenv
