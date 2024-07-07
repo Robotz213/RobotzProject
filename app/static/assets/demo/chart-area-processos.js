@@ -12,9 +12,9 @@ $(document).ready(function () {
       var myLineChart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: data.labels,
+          labels: data.month_name,
           datasets: [{
-            label: "Sessions",
+            label: "Valor Da Causa",
             lineTension: 0.3,
             backgroundColor: "rgba(2,117,216,0.2)",
             borderColor: "rgba(2,117,216,1)",
@@ -25,7 +25,7 @@ $(document).ready(function () {
             pointHoverBackgroundColor: "rgba(2,117,216,1)",
             pointHitRadius: 50,
             pointBorderWidth: 2,
-            data: data.data,
+            data: data.value_claim,
           }],
         },
         options: {
@@ -44,7 +44,7 @@ $(document).ready(function () {
             yAxes: [{
               ticks: {
                 min: 0,
-                max: 40000,
+                max: data.max_claimed,
                 maxTicksLimit: 5
               },
               gridLines: {
